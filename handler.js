@@ -15,12 +15,12 @@ module.exports.roman = async (event, context) => {
   while (inputValue > 0){
     console.log(inputValue);
     if((inputValue / 1000) >= 1) {
-      console.log("M: " + inputValue);
-      console.log("Miles");
+      //console.log("M: " + inputValue);
+      //console.log("Miles");
       result.push('M');
       inputValue = inputValue - 1000;
     } else if ((inputValue / 500) >= 1) {
-      if(inputValue >= 800 && inputValue <= 900){
+      if(inputValue >= 900 && inputValue <= 1000){
         result.push('I');
         result.push('M');
         inputValue = inputValue - 900;
@@ -30,7 +30,7 @@ module.exports.roman = async (event, context) => {
         inputValue = inputValue - 500;
       }
     } else if ((inputValue / 100) >= 1) {
-      if (inputValue >= 90 && inputValue <= 100){
+      if (inputValue >= 400 && inputValue <= 500){
         result.push('I');
         result.push('D');
         inputValue = inputValue - 400;
